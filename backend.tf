@@ -1,16 +1,15 @@
 terraform {
-  backend "s3" {
-    bucket          = "terraform-tfstate-miguel"
-    dynamodb_table  = "terraform-state-lock"
-    encrypt         = true
-    key             = "docker-ecs.tfstate"
-    region          = "us-east-1"
-  }
+    backend "s3" {
+        bucket          = "terraform-tfstate-ecsworkshop"
+        encrypt         = true
+        key             = "terraform"
+        region          = "us-east-1"
+    }
 
     required_providers {
         aws = {
-            source                = "hashicorp/aws"
-            version               = "~> 3.0"
+            source      = "hashicorp/aws"
+            version     = "~> 3.0"
         }
     }
 }
