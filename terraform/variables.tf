@@ -9,3 +9,15 @@ variable "ecs_task_def_cpu" {
   description   = "ECS task definition cpu"
   default       = 256
 }
+
+variable "ecs_service_desired_count" {
+  type          = number
+  description   = "ECS service desired task count"
+  default       = 2
+}
+
+variable "lb_container_port" {
+  type          = number
+  description   = "Container port"
+  default       = 5637
+}
